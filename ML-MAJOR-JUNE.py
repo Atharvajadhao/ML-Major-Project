@@ -14,10 +14,10 @@ st.write('''
 Please enter the require information in given text box.
 ''')
 st.write('''
-And please do not leave any text box blank.
+**And please do not leave any text box blank.**
 ''')
 st.write('''
-Note:- The Machine Learning model is trained by diabetes.csv data set and the model has the accuracy of 82%.
+**Note:-** The Machine Learning model is trained by diabetes.csv data set and the model has the **accuracy of 82%.**
 ''')
 st.write('''
 Click here to access data set [link](https://github.com/Atharvajadhao/ML-MAJOR-JUNE/blob/main/data/diabetes.csv).
