@@ -11,23 +11,22 @@ This app predicts that a person is have Diabetes or not.
 
 st.sidebar.header("User Input Features")
 
-st.sidebar.markdown("""
-[Example CSV input file](https://github.com/Atharvajadhao/ML-MAJOR-JUNE/blob/main/diabetes_example.csv)
-""")
+def user_input_feature():
+    Pregnancies = st.text_input("Number of Pregnencies")
+    Glucose = st.text_input("Glucose")
+    BloodPressure = st.text_input("Blood Pressure")
+    SkinThickness = st.text_input("Skin Thickness")
+    Insulin = st.text_input("Insulin")
+    BMI = st.text_input("BMI")
+    DiabetesPedigreeFunction = st.text_input("Diabetes Pedigree Function")
+    Age = st.text_input("Age")
+    features = pd.DataFrame(data, index=[0])
+    return features
+input_df = user_input_features()
 
-uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
-if uploaded_file is not None:
-    input_df = pd.read_csv(uploaded_file)
-else:
-  def user_input_feature():
-    Pregnancies = st.sidebar.text_input("Number of Pregnencies", "type here")
-    Glucose = st.sidebar.text_input("Glucose", "type here")
-    BloodPressure = st.sidebar.text_input("Blood Pressure", "type here")
-    SkinThickness = st.sidebar.text_input("Skin Thickness", "type here")
-    Insulin = st.sidebar.text_input("Insulin", "type here")
-    BMI = st.sidebar.text_input("BMI", "type here")
-    DiabetesPedigreeFunction = st.sidebar.text_input("Diabetes Pedigree Function", "type here")
-    Age = st.sidebar.text_input("Age", "type here")
-
-df = st.selectbox("Select Data",("Iris", "Wine"))
-st.write(df)
+if st.button("Predict"):
+    result = classifier.predict(input_df)
+    if result == 0:
+        st.write('This person does not have Diabetes')
+    elif result == 1:
+        sty.write('This person have Diabetes')
