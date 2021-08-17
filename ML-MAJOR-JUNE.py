@@ -17,7 +17,7 @@ st.write('''
 **And please do not leave any text box blank.**
 ''')
 st.write('''
-**Note:-** The Machine Learning model is trained by diabetes.csv data set and the model has the **accuracy of 82%.**
+**Note:-** The Machine Learning model is trained by diabetes.csv data set and the model has the **accuracy of 82%.** We can't assure that the prediction will always be perfect. Please take doctor's advice before believing on the ML model.
 ''')
 st.write('''
 Click here to access data set [link](https://github.com/Atharvajadhao/ML-MAJOR-JUNE/blob/main/data/diabetes.csv).
