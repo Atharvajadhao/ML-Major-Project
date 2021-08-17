@@ -51,6 +51,6 @@ input_df = user_input_feature()
 if st.button("Predict"):
     result = classifier.predict(input_df)
     if result == 0:
-        st.write('**This person does not have Diabetes**')
+        st.write('# This person does not have Diabetes')
     elif result == 1:
-        st.write('**This person have Diabetes**')
+        st.write('# This person have Diabetes')
