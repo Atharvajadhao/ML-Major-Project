@@ -3,7 +3,7 @@ This web app predicts that a person is having Diabetes or not on the basis of th
 
 The web app was built in Python using the following libraries:
 **streamlit
-**pandas
-**numpy
-**scikit-learn
-**pickle
+pandas
+numpy
+scikit-learn
+pickle
