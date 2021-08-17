@@ -34,6 +34,16 @@ def user_input_feature():
     BMI = st.text_input("BMI")
     DiabetesPedigreeFunction = st.text_input("Diabetes Pedigree Function")
     Age = st.text_input("Age")
+    data = {
+        'Pregnancies':Pregnancies,
+        'Glucose':Glucose,
+        'BloodPressure':BloodPressure,
+        'SkinThickness':SkinThickness,
+        'Insulin':Insulin,
+        'BMI':BMI,
+        'DiabetesPedigreeFunction':DiabetesPedigreeFunction,
+        'Age':Age
+    }
     features = pd.DataFrame(data, index=[0])
     return features
 input_df = user_input_feature()
